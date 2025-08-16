@@ -1,64 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sagun Pai — Researcher & Blog</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sagun Pai — Research & Writing</title>
+  <meta name="description" content="Sagun Pai — Quantitative Strategist (HFT), IIT Bombay alumnus. Research, writing, and projects." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:,">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="#home" class="logo">Sagun Pai</a>
-      <ul class="nav-links">
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="name">Sagun Pai</h1>
+      <p class="tagline">Quantitative Strategist (HFT) • IIT Bombay • ML, Markets, IR</p>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#papers">Papers</a>
+        <a href="#projects">Projects</a>
+        <a href="/blog/">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="cta-row">
+        <a class="btn" href="mailto:sagung.pai@gmail.com">Email</a>
+        <a class="btn ghost" href="/cv/Sagun_Pai_CV.pdf">CV</a>
+        <a class="btn ghost" href="https://scholar.google.com/citations?user=dTWItMsAAAAJ&hl=en">Google Scholar</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/sagun-pai-81b1485a/">LinkedIn</a>
+      </div>
+    </div>
   </header>
 
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Sagun Pai</h1>
-      <p>Quantitative Researcher & Algorithmic Trader (IIT Bombay)</p>
+  <main>
+    <section id="about" class="container section">
+      <h2>About</h2>
       <p>
-        <a class="btn" href="https://scholar.google.com/citations?user=dTWItMsAAAAJ&hl=en" target="_blank">Google Scholar</a>
-        <a class="btn" href="https://www.linkedin.com/in/sagun-pai-81b1485a" target="_blank">LinkedIn</a>
+        I’m a quantitative strategist focused on high-frequency trading and market microstructure.
+        At <strong>Mathisys Advisors</strong> (2018–present) I’ve traded equities and futures across Brazil, India, and Canada; built
+        real-time quality indicators that improved predictor correlations by 30%+; and modeled intraday volatility for
+        market-making strategies. Previously I worked in <strong>Fixed Income & Currencies</strong> at Deutsche Bank and held roles at
+        Citi and Deloitte. I hold a dual <strong>B.Tech + M.Tech</strong> in Electrical Engineering from <strong>IIT Bombay</strong>, with double minors in
+        Computer Science and Operations Research (AIR 189). 
       </p>
+      <p class="small">
+        Highlights: 4 research papers (Statistics/ML/IR), Academic Colour Award, UG Research Award, RuSSIR “Most Original Idea”. 
+      </p>
+    </section>
+
+    <section id="papers" class="container section">
+      <h2>Selected Papers</h2>
+      <p>See the full list on <a href="https://scholar.google.com/citations?user=dTWItMsAAAAJ&hl=en">Google Scholar</a>. A few representative items will be pinned here as I add project pages.</p>
+      <ul class="papers">
+        <li><em>Efficient Query Predictions on Large Textual Datasets</em> — IRIT/University of Toulouse; poster at RuSSIR’15; published at CORIA’17. </li>
+      </ul>
+    </section>
+
+    <section id="projects" class="container section">
+      <h2>Projects & Notes</h2>
+      <ul class="list">
+        <li>Liquidity stress-testing pipeline on Hadoop (10GB/day), with interactive reporting for traders (Citi). </li>
+        <li>ANN/SVM/RF long-short FX strategy prototype (DB). </li>
+        <li>Volatility modeling for intraday market-making (Mathisys). </li>
+      </ul>
+    </section>
+
+    <section class="container section">
+      <h2>Writing</h2>
+      <p>Latest on the blog:</p>
+      <ul class="list">
+        <li><a href="/blog/jane-street-analysis.html">SEBI vs Jane Street: expiry-day moves, and what “algorithmic collusion” might really mean</a> (Aug 16, 2025)</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contact</h2>
+      <p><a href="mailto:sagung.pai@gmail.com">sagung.pai@gmail.com</a> • IIT Bombay, Powai • +91 9768836790 </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="y"></span> Sagun Pai</p>
     </div>
-  </section>
-
-  <section id="publications" class="content-section">
-    <h2>Selected Publications</h2>
-    <ul class="pub-list">
-      <li><strong>[Top-Cited Paper 1]</strong>, Journal/Conference — Year.</li>
-      <li><strong>[Paper 2]</strong>, Journal/Conference — Year.</li>
-      <li><strong>[Paper 3]</strong>, Journal/Conference — Year.</li>
-      <!-- Replace with titles from Scholar -->
-    </ul>
-  </section>
-
-  <section id="blog" class="content-section">
-    <h2>Blog</h2>
-    <article>
-      <h3><a href="blog/jane-street-analysis.html">SEBI vs Jane Street — algorithmic collusion and market impact</a></h3>
-      <p>A brief analysis of SEBI’s interim order and what it means for algorithmic trading oversight.</p>
-    </article>
-    <!-- future blog posts go here -->
-    <p><a href="blog/index.html" class="btn-secondary">View All Posts →</a></p>
-  </section>
-
-  <section id="about" class="content-section">
-    <h2>About</h2>
-    <p><strong>Education:</strong> B.Tech & M.Tech, IIT Bombay (Indian Institute of Technology Bombay).</p>
-    <p><strong>Professional Summary:</strong> Quantitative researcher and algorithmic trader, with experience in building predictive models, volatility frameworks, and trading systems across equities and futures markets.</p>
-  </section>
-
-  <footer>
-    <p>© <span id="year"></span> Sagun Pai</p>
   </footer>
-
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
