@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SEBI vs Jane Street — analysis</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    .post-meta{color:var(--muted);font-size:0.95rem;margin-bottom:12px}
+    .post-body p{margin-bottom:14px}
+    .footnotes{font-size:0.88rem;color:var(--muted);margin-top:24px;border-top:1px dashed #e6eefb;padding-top:12px}
+    .cite{color:var(--muted);font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h2>SEBI vs Jane Street — algorithmic collusion, expiry-day dynamics and market integrity</h2>
+      <div class="post-meta">Published: July 2025 — Analysis by Sagun Pai</div>
+
+      <div class="post-body">
+        <p>The Securities and Exchange Board of India (SEBI) issued an interim enforcement order in July 2025 alleging expiry-day index manipulation by entities connected to Jane Street. SEBI’s order froze several hundred million dollars in purported gains and temporarily restricted certain trading access while investigations continue. 0</p>
+
+        <p><strong>What SEBI alleges (short summary):</strong> the order describes patterns of coordinated trades across cash, futures and options around index expiry days that the regulator says were used to distort index levels and then profit from options positions. The interim order details several expiry-day episodes and impounded alleged unlawful gains. 1</p>
+
+        <p><strong>How this can be engineered (mechanics):</strong> executing large directional cash trades in select index constituents close to expiry can move the underlying index level and therefore option mark-to-market values. When coupled with simultaneous futures and options positioning, this creates the possibility to capture outsized profits on expiry re-pricing. The regulator’s findings focus on timing, size and cross-segment patterns that — in aggregate — looked inconsistent with simple arbitrage. 2</p>
+
+        <p><strong>Algorithmic collusion risk:</strong> modern proprietary firms run automated strategies that act on signals and market state. If multiple algorithmic strategies (within a firm, or across related entities) are designed to produce similar expiry-time pressure, the market effect can mimic coordinated behaviour. SEBI’s action highlights detection challenges: distinguishing lawful, high-speed arbitrage from manipulative patterns often requires linking order-level intent across instruments and accounts. Independent observers and industry analysts have warned this case raises questions about structural gaps in oversight. 3</p>
+
+        <p><strong>Potential market/academic implications:</strong> regulators may 1) require more granular audit trails and cross-segment order reporting, 2) revisit exchange microstructure around expiry (auction rules, limits on large block trades close to expiry), and 3) promote algorithms that incorporate market-impact-aware constraints. For researchers, the case suggests fertile work on causal detection of manipulative patterns (counterfactual simulation, impact estimation) and stress-testing algorithmic strategies for unintended systemic effects. 4</p>
+
+        <p><strong>Conclusion:</strong> The SEBI interim order is a significant reminder: as trading automation scales, so does the need for robust cross-instrument surveillance and clear regulatory frameworks for algorithmic conduct. The legal and inquiry process will determine whether trades were unlawful or aggressive arbitrage; regardless, the episode matters for market design and the research agenda on algorithmic oversight. 5</p>
+      </div>
+
+      <div class="footnotes">
+        <div class="cite"><strong>Key sources:</strong></div>
+        <ol>
+          <li>SEBI interim order (July 3, 2025) — enforcement order and details. (SEBI official order). 6</li>
+          <li>Reporting & timeline summary — Reuters. 7</li>
+          <li>Bloomberg background on how the regulator built the case. 8</li>
+          <li>Industry analysis on algorithmic trading & allegations — FTI Consulting overview. 9</li>
+          <li>Further market reaction and calls for wider probes — Risk.net. 10</li>
+        </ol>
+      </div>
+
+      <p style="margin-top:16px"><a href="../index.html">← Back to home</a></p>
+    </section>
+  </main>
+</body>
+</html>
