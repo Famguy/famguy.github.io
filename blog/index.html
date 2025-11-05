@@ -1,32 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — Sagun Pai</title>
-  <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <a href="../index.html" class="logo">← Home</a>
-    </nav>
-  </header>
+---
+layout: default
+---
 
-  <section class="content-section">
-    <h1>Blog</h1>
-    <article>
-      <h2><a href="jane-street-analysis.html">SEBI vs Jane Street — algorithmic collusion and market impact</a></h2>
-      <p class="post-meta">July 2025</p>
-      <p>A brief analysis of SEBI’s interim order and what it means for algorithmic trading oversight.</p>
-    </article>
-    <!-- more posts here -->
-  </section>
+<!-- <div class="header-bar">
+  <h1>{{ site.blog_name }}</h1>
+  <h2>{{ site.blog_description }}</h2>
+</div> -->
 
-  <footer>
-    <p>© <span id="year2"></span> Sagun Pai</p>
-  </footer>
+<ul class="post-list">
+  {% for post in paginator.posts %}
+    <li>
+      <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+      <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
+      <p>{{ post.description }}</p>
+    </li>
+  {% endfor %}
+</ul>
 
-  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
-</body>
-</html>
+{% include pagination.html %}
