@@ -9,13 +9,13 @@ footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
-url: # the base hostname & protocol for your site
-baseurl:   # the subpath of your site, e.g. /blog/
-last_updated: # leave blank if you don't want to display last updated
-
 # google-analytics
 #google_analytics: UA-92958928-1
-repo: http://github.com/famguy
+url: "https://famguy.github.io"   # REQUIRED for user site
+baseurl: ""                       # REQUIRED for user site
+last_updated: 
+
+repo: https://github.com/famguy/famguy.github.io  # correct repo link
 
 # -----------------------------------------------------------------------------
 # Social integration
