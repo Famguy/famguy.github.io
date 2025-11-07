@@ -28,14 +28,12 @@ jobs:
           bundler-cache: true
 
       - name: Install dependencies
-        run: |
-          bundle install --path vendor/bundle
+        run: bundle install --path vendor/bundle
 
       - name: Build site
-        run: |
-          bundle exec jekyll build --trace
         env:
           JEKYLL_ENV: production
+        run: bundle exec jekyll build --trace
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
