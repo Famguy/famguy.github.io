@@ -1,143 +1,289 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sagun Pai</title>
-  <meta name="description" content="Homepage of Sagun Pai — simple, clean, single‑file site inspired by aadityadar.com" />
+  <meta name="description" content="Sagun Pai — quantitative researcher working on sustainable, long-term investment decisions. Prospective PhD student." />
+  <meta name="author" content="Sagun Pai" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Sagun Pai" />
-  <meta property="og:description" content="Engineer. This is a minimalist, fast homepage." />
+  <meta property="og:description" content="Quantitative researcher — sustainable, long-term investment decisions." />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='black'/%3E%3Ctext x='50' y='62' font-size='64' text-anchor='middle' font-family='serif' fill='white'%3ESP%3C/text%3E%3C/svg%3E" />
-  <style>
-    :root { --bg:#fff; --fg:#111827; --muted:#6b7280; --link:#1f2937; --border:#e5e7eb; --card:#f9fafb; }
-    @media (prefers-color-scheme: dark) { :root { --bg:#0b0e14; --fg:#e5e7eb; --muted:#a1a1aa; --link:#d1d5db; --border:#1f2937; --card:#0f141c; } }
-    html,body{height:100%}
-    body{margin:0;font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg);color:var(--fg)}
-    .container{max-width:980px;margin:0 auto;padding:2rem 1rem 4rem}
-    header{display:flex;flex-wrap:wrap;align-items:baseline;gap:.75rem;margin-bottom:1rem}
-    .brand{font-size:clamp(1.6rem,1.2rem+2.2vw,2.4rem);font-weight:800}
-    .subtitle{color:var(--muted);font-weight:500}
-    nav{display:flex;gap:1rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:.6rem 0;margin-bottom:2rem;flex-wrap:wrap}
-    nav a{color:var(--link);text-decoration:none;padding:.2rem .4rem;border-radius:.35rem}
-    nav a:hover,nav a:focus{background:var(--card);outline:none}
-    main{display:grid;grid-template-columns:1.35fr .9fr;gap:2rem}
-    @media (max-width:900px){main{grid-template-columns:1fr}}
-    section h2{font-size:1.125rem;margin:0 0 .75rem}
-    .about{background:var(--card);padding:1rem;border:1px solid var(--border);border-radius:.6rem}
-    .about p{margin:.6rem 0}
-    .fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1rem}
-    .fields h3{margin:0 0 .3rem;font-size:1rem}
-    .chip{display:inline-block;padding:.2rem .55rem;border:1px solid var(--border);border-radius:999px;margin:.15rem .25rem 0 0;font-size:.9rem}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:.6rem;padding:1rem}
-    .updates li{margin-bottom:.5rem}
-    .media{display:grid;place-items:start;gap:1rem}
-    .headshot{width:220px;max-width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
-    .muted{color:var(--muted)}
-    .cv-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .75rem;border:1px solid var(--border);border-radius:.5rem;text-decoration:none;color:var(--fg);background:transparent}
-    .cv-btn:hover,.cv-btn:focus{background:var(--card)}
-    footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--border);color:var(--muted);font-size:.95rem}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Sagun Pai",
-    "url": "https://famguy.github.io/",
-    "jobTitle": "Engineer",
-    "sameAs": [
-      "https://github.com/famguy",
-      "https://www.linkedin.com/in/sagun-pai-81b1485a/"
-    ]
-  }
-  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">Sagun Pai</div>
-      <div class="subtitle">Engineer</div> <!-- TODO: change subtitle -->
-    </header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav aria-label="Main navigation">
-      <a href="#about">home</a>
-      <a href="#projects">projects</a>
-      <a href="#posts">writing</a>
-      <a href="#contact">contact</a>
-      <a href="./cv.pdf">cv</a>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#top">Sagun&nbsp;Pai</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a class="nav-cv" href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <main>
-      <section id="about" class="about">
-        <h2>About</h2>
-        <p>
-          I'm an engineer working on data systems and tooling. I enjoy building
-          clean interfaces, fast pipelines, and reproducible research code. This page
-          is a minimalist, single‑file site you can host on GitHub Pages.
+  <main id="main">
+    <!-- ======================= HERO / PROFILE ======================= -->
+    <section id="top" class="hero container">
+      <div class="hero-photo">
+        <!-- Replace photo.jpg in assets/img/ to use a real photo; monogram shows otherwise -->
+        <div class="monogram" aria-hidden="true">SP</div>
+        <!-- <img src="assets/img/photo.jpg" alt="Sagun Pai" /> -->
+      </div>
+      <div class="hero-intro">
+        <h1>Sagun Pai</h1>
+        <p class="tagline">Quantitative Researcher &middot; Prospective PhD Student</p>
+        <p class="affil">
+          Working at the intersection of machine learning, optimization, and finance &mdash;
+          with a focus on <strong>sustainable, long-term investment decisions</strong>.
         </p>
-        <p>
-          Previously: <span class="muted">add a line or two about past roles or interests.</span>
-        </p>
+        <ul class="contact-list">
+          <li><a href="mailto:sagung.pai@gmail.com">sagung.pai@gmail.com</a></li>
+          <li class="sep">&middot;</li>
+          <!-- Replace # with your real links -->
+          <li><a href="https://scholar.google.com/citations?user=dTWItMsAAAAJ&amp;hl=en" rel="noopener" target="_blank">Google&nbsp;Scholar</a></li>
+          <li class="sep">&middot;</li>
+          <li><a href="https://github.com/Famguy" rel="noopener" target="_blank">GitHub</a></li>
+          <li class="sep">&middot;</li>
+          <li><a href="https://in.linkedin.com/in/sagun-pai-81b1485a" rel="noopener" target="_blank">LinkedIn</a></li>
+          <li class="sep">&middot;</li>
+          <li><a href="cv.pdf" target="_blank" rel="noopener">CV&nbsp;(PDF)</a></li>
+        </ul>
+      </div>
+    </section>
 
-        <div class="fields">
-          <div>
-            <h3>Focus areas</h3>
-            <span class="chip">Data Engineering</span>
-            <span class="chip">Quant Research</span>
-            <span class="chip">Python</span>
-            <span class="chip">C++</span>
-          </div>
-          <div>
-            <h3>Currently</h3>
-            <span class="chip">Learning Rust</span>
-            <span class="chip">Time‑series</span>
-            <span class="chip">Open‑source</span>
-          </div>
+    <!-- ======================= ABOUT ======================= -->
+    <section id="about" class="block container">
+      <h2>About</h2>
+      <p>
+        I am a quantitative researcher with a background in Electrical Engineering, Computer
+        Science, and Operations Research from the
+        <strong>Indian Institute of Technology (IIT) Bombay</strong>, where I completed a
+        five-year integrated Bachelors and Masters of Technology. Over the past several years I
+        have worked as a quantitative strategist in high-frequency trading and as an analyst
+        across fixed income, currencies, and risk &mdash; building statistical and
+        machine-learning models that make decisions under uncertainty in live markets.
+      </p>
+      <p>
+        My research interest now turns toward a longer horizon: how can data-driven methods help
+        us make <strong>sustainable, long-term investment decisions</strong>? I am drawn to
+        questions of how capital can be allocated responsibly &mdash; accounting for
+        environmental, social, and governance (ESG) factors and long-run risk &mdash; rather than
+        optimizing solely for short-term returns. I am applying to PhD programs to pursue these
+        questions rigorously, combining my quantitative finance experience with my earlier
+        research in statistics, machine learning, and information retrieval.
+      </p>
+    </section>
+
+    <!-- ======================= RESEARCH INTERESTS ======================= -->
+    <section id="research" class="block container">
+      <h2>Research Interests</h2>
+      <div class="interests-grid">
+        <div class="interest">
+          <h3>Sustainable &amp; ESG-aware Investing</h3>
+          <p>Incorporating environmental, social, and governance signals into portfolio
+            construction and capital-allocation decisions.</p>
         </div>
-      </section>
-
-      <aside class="media">
-        <img class="headshot" alt="Headshot placeholder" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='440' height='440'%3E%3Crect width='100%25' height='100%25' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236b7280' font-family='sans-serif' font-size='22'%3EAdd your photo (220x220)%3C/text%3E%3C/svg%3E" />
-        <a class="cv-btn" href="./cv.pdf" download>Download CV (PDF)</a>
-        <div class="card">
-          <strong>Links</strong>
-          <ul>
-            <li><a href="https://github.com/famguy">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/insagun-pai-81b1485a/">LinkedIn</a></li>
-            <li><a href="mailto:sagun.pai+site@gmail.com">email</a> <!-- TODO: change email --></li>
-          </ul>
+        <div class="interest">
+          <h3>Long-horizon Decision-making</h3>
+          <p>Optimization and decision-making under uncertainty over long investment horizons,
+            balancing return, risk, and externalities.</p>
         </div>
-      </aside>
-    </main>
+        <div class="interest">
+          <h3>Machine Learning for Finance</h3>
+          <p>Statistical and deep-learning models for forecasting, signal quality, and robust
+            estimation in noisy financial data.</p>
+        </div>
+        <div class="interest">
+          <h3>Information Retrieval &amp; Data Systems</h3>
+          <p>Extracting decision-relevant structure from large textual and market datasets &mdash;
+            building on my published work in query expansion and IR.</p>
+        </div>
+      </div>
+    </section>
 
-    <section id="projects" class="card" style="margin-top:2rem">
-      <h2>Selected projects</h2>
-      <ul>
-        <li><strong>Project One</strong> — one‑line description and <a href="#">code</a>.</li>
-        <li><strong>Project Two</strong> — one‑line description and <a href="#">post</a>.</li>
-        <li><strong>Project Three</strong> — one‑line description and <a href="#">demo</a>.</li>
+    <!-- ======================= PUBLICATIONS ======================= -->
+    <section id="publications" class="block container">
+      <h2>Publications</h2>
+      <p class="muted">
+        Peer-reviewed papers in Statistics, Machine Learning, and Information Retrieval.
+        Full list on <a href="https://scholar.google.com/citations?user=dTWItMsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google&nbsp;Scholar</a>.
+      </p>
+      <ol class="pub-list">
+        <li class="pub">
+          <span class="pub-title">A Study on the Effects of Response Time on Travel Package Attributes</span>
+          <span class="pub-authors">U. Ananthakumar, <strong>S. Pai</strong></span>
+          <span class="pub-meta"><em>Data</em> (MDPI), 2021</span>
+        </li>
+        <li class="pub">
+          <span class="pub-title">Understanding Tourist Preferences for Travel Packages: A Conjoint Analysis Approach</span>
+          <span class="pub-authors"><strong>S. Pai</strong>, U. Ananthakumar</span>
+          <span class="pub-meta"><em>Asia Pacific Journal of Tourism Research</em>, 2017</span>
+        </li>
+        <li class="pub">
+          <span class="pub-title">Forecasting Global Horizontal Solar Irradiance: A Case Study Based on Indian Geography</span>
+          <span class="pub-authors"><strong>S. Pai</strong>, S. A. Soman</span>
+          <span class="pub-meta">7th International Conference on Power Systems (ICPS), 2017</span>
+        </li>
+        <li class="pub">
+          <span class="pub-title">Mise en &oelig;uvre d&rsquo;une base de donn&eacute;es graphe pour l&rsquo;analyse des logs de requ&ecirc;tes en recherche d&rsquo;information</span>
+          <span class="pub-authors">J. Mothe, <strong>S. Pai</strong></span>
+          <span class="pub-meta">Conf&eacute;rence francophone en Recherche d&rsquo;Information et Applications (CORIA), 2017</span>
+          <span class="pub-note">Work conducted at IRIT, University of Toulouse; poster at RuSSIR 2015.</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ======================= EXPERIENCE ======================= -->
+    <section id="experience" class="block container">
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Mathisys Advisors</h3>
+          <span class="entry-date">Apr 2018 &ndash; Present</span>
+        </div>
+        <p class="entry-role">Quantitative Strategist, High-Frequency Trading &middot; New Delhi, India</p>
+        <ul>
+          <li>Traded equities and futures across Brazil, India, and Canada, managing Sharpe, order-to-trade ratio, profitability, and drawdown.</li>
+          <li>Developed &ldquo;quality indicators&rdquo; that improved real-time predictor performance, increasing correlation by over 30%.</li>
+          <li>Modelled volatility from historic and intraday price/volume movements to enhance market-making strategies.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Deutsche Bank</h3>
+          <span class="entry-date">Jun 2017 &ndash; Mar 2018</span>
+        </div>
+        <p class="entry-role">Financial Analyst, Fixed Income and Currencies &middot; Mumbai, India</p>
+        <ul>
+          <li>Priced a range of Rates and FX exotic products for trading desks in Tokyo and London.</li>
+          <li>Built a framework to monitor live P&amp;L and risk for the desk&rsquo;s portfolio to support hedging decisions.</li>
+          <li>Created a long-short algorithmic trading strategy based on FX-movement predictions using ANN, SVM, and Random Forests.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Citi Group</h3>
+          <span class="entry-date">May 2015 &ndash; Jul 2015</span>
+        </div>
+        <p class="entry-role">Summer Analyst, Rates and Commodities &middot; Pune, India</p>
+        <ul>
+          <li>Designed a pipeline for liquidity stress testing over 10&nbsp;GB of daily data using the Hadoop big-data framework.</li>
+          <li>Achieved ~90% aggregate time savings; built an interactive GUI to generate custom reports for traders.</li>
+          <li>Presented to the Head of Citicorp Services India and trained 20+ employees; received a full-time offer.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>University of Toulouse &mdash; IRIT</h3>
+          <span class="entry-date">May 2014 &ndash; Jul 2014</span>
+        </div>
+        <p class="entry-role">Visiting Researcher, Institute of Computer Science Research (IRIT) &middot; Toulouse, France</p>
+        <ul>
+          <li>Formulated a novel algorithm for efficient query prediction over large textual datasets (1.6&nbsp;million unique terms).</li>
+          <li>Deployed Python scripts for query expansion; poster presentation at RuSSIR&rsquo;15 and publication at CORIA&rsquo;17.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Deloitte</h3>
+          <span class="entry-date">Dec 2014 &ndash; Jan 2015</span>
+        </div>
+        <p class="entry-role">Winter Analyst, Enterprise Risk Services &middot; Mumbai, India</p>
+        <ul>
+          <li>Analysed pricing and risk-management strategies for Credit Default Swaps with a focus on the ISDA model.</li>
+          <li>Improved model accuracy by 25% and automated calibration using a dynamic set of market risk factors.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= EDUCATION ======================= -->
+    <section id="education" class="block container">
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Indian Institute of Technology Bombay</h3>
+          <span class="entry-date">2012 &ndash; 2017</span>
+        </div>
+        <p class="entry-role">Bachelors &amp; Masters of Technology (Dual Degree), Electrical Engineering</p>
+        <ul>
+          <li>Double Minor in <strong>Computer Science</strong> and <strong>Operations Research</strong>.</li>
+          <li>CGPA 8.54/10 &middot; All India Rank 189 (top 0.04%) in JEE.</li>
+          <li>Master&rsquo;s Thesis: <em>Investigation of Renewable Energy Forecasting techniques within the Indian subcontinent.</em></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= AWARDS ======================= -->
+    <section id="awards" class="block container">
+      <h2>Awards &amp; Scholarships</h2>
+      <ul class="awards-list">
+        <li><span class="award-year">2017</span> Academic Colour Award (2 of 200) &amp; Undergraduate Research Award (40 of 900), IIT Bombay.</li>
+        <li><span class="award-year">2017</span> 3rd place, Deep Learning and Security Innovation Hackathon, SG-CRC, NUS Singapore.</li>
+        <li><span class="award-year">2015</span> Most Original Idea Award, Russian School of Information Retrieval (RuSSIR).</li>
+        <li><span class="award-year">2015</span> Erasmus Mundus Scholarship &mdash; fully funded student exchange (Estonia).</li>
+        <li><span class="award-year">2014</span> Charpak Scholarship, awarded by the French Embassy to the top 30 students across India.</li>
+      </ul>
+
+      <h2 class="subhead">Leadership &amp; Outreach</h2>
+      <ul class="awards-list">
+        <li><span class="award-year">2016</span> Founded <strong>Datagiri</strong>, the first student-media-run datablog; three articles received national media coverage.</li>
+        <li><span class="award-year">2017</span> Teaching Assistant for 120+ students in Electrical Circuits and Control Systems, IIT Bombay.</li>
+        <li><span class="award-year">2015</span> Editorial Board Member (<em>Insight</em>, IITB campus newsletter); led technical and research coverage.</li>
       </ul>
     </section>
 
-    <section id="posts" class="card" style="margin-top:1rem">
-      <h2>Recent writing</h2>
-      <ul class="updates">
-        <li><time class="muted">2025‑11‑09</time> — This site went live. 🎉</li>
-        <li><time class="muted">2025‑10‑01</time> — Example note on experiments.</li>
-      </ul>
+    <!-- ======================= SKILLS ======================= -->
+    <section id="skills" class="block container">
+      <h2>Skills &amp; Certifications</h2>
+      <div class="skills-grid">
+        <div>
+          <h3>Programming</h3>
+          <p>Python, C++, R, MATLAB, Java, SQL, VBA</p>
+        </div>
+        <div>
+          <h3>Methods</h3>
+          <p>Machine learning, statistical modeling, optimization, time-series forecasting, information retrieval</p>
+        </div>
+        <div>
+          <h3>Certifications</h3>
+          <p>CFA Level II Candidate &middot; FRM Level II Candidate</p>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <section id="contact" class="card" style="margin-top:1rem">
-      <h2>Contact</h2>
-      <p>Best way to reach me is <a href="mailto:sagun.pai+site@gmail.com">email</a>. I'm also on <a href="https://github.com/<your-username>">GitHub</a> and <a href="https://www.linkedin.com/in/<your-handle>/">LinkedIn</a>.</p>
-    </section>
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <a href="mailto:sagung.pai@gmail.com">sagung.pai@gmail.com</a> &middot;
+        <a href="cv.pdf" target="_blank" rel="noopener">Curriculum Vitae</a>
+      </p>
+      <p class="copyright">&copy; <span id="year"></span> Sagun Pai. Last updated June 2026.</p>
+    </div>
+  </footer>
 
-    <footer>
-      <p>© <span id="y"></span> Sagun Pai · <span class="muted">Built with a single HTML file.</span></p>
-      <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
-    </footer>
-  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Smooth-scroll handled by CSS scroll-behavior; nothing else required.
+  </script>
 </body>
 </html>
