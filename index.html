@@ -23,7 +23,10 @@
   <header class="site-header">
     <nav class="nav container">
       <a class="brand" href="#top">Sagun&nbsp;Pai</a>
-      <ul class="nav-links">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#publications">Publications</a></li>
@@ -283,7 +286,25 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Smooth-scroll handled by CSS scroll-behavior; nothing else required.
+
+    // Mobile menu toggle
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    // Close the menu after tapping a link
+    links.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        links.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      }
+    });
   </script>
 </body>
 </html>
