@@ -5,16 +5,16 @@
 
 :root {
   --ink:        #1a1a1a;
-  --ink-soft:   #444;
-  --muted:      #6b6b6b;
-  --line:       #e6e3dc;
-  --bg:         #fbfaf7;
-  --bg-card:    #ffffff;
-  --accent:     #2f5e50;   /* deep sustainable green */
-  --accent-2:   #3b7d6a;
+  --ink-soft:   #33302c;
+  --muted:      #555;
+  --line:       #d6c7b3;   /* soft tan rule */
+  --bg:         #fff1e5;   /* FT salmon paper */
+  --bg-card:    #fbf2e3;   /* lighter salmon card */
+  --accent:     #990f3d;   /* FT claret */
+  --accent-2:   #7a0c30;   /* darker claret (hover) */
   --maxw:       820px;
-  --serif:      "Newsreader", Georgia, "Times New Roman", serif;
-  --sans:       "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --serif:      Georgia, "Times New Roman", serif;
+  --sans:       -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -60,7 +60,7 @@ strong { font-weight: 600; }
 /* ---------------- Header / nav ---------------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(251,250,247,.92);
+  background: rgba(255,241,229,.92);
   backdrop-filter: saturate(140%) blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -153,6 +153,20 @@ strong { font-weight: 600; }
 .block h2.subhead { margin-top: 34px; }
 .block p { margin: 0 0 16px; }
 .muted { color: var(--muted); font-size: .95rem; }
+
+/* ---------------- Summary strip ---------------- */
+.summary { padding-top: 8px; padding-bottom: 8px; }
+.summary-row {
+  display: flex; gap: 16px; align-items: baseline;
+  padding: 10px 0; border-bottom: 1px solid var(--line);
+}
+.summary-row:last-child { border-bottom: 0; }
+.summary-label {
+  flex: 0 0 96px; font-family: var(--sans);
+  font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--accent);
+}
+.summary-value { color: var(--ink-soft); }
 
 /* ---------------- Research interests ---------------- */
 .interests-grid {
@@ -253,6 +267,8 @@ strong { font-weight: 600; }
 
   .hero { flex-direction: column; text-align: center; padding-top: 44px; gap: 22px; }
   .contact-list { justify-content: center; }
+  .summary-row { flex-direction: column; gap: 2px; }
+  .summary-label { flex-basis: auto; }
   .hero-intro h1 { font-size: 2.1rem; }
   .interests-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; gap: 14px; }
